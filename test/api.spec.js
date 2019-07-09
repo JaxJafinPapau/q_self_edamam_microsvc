@@ -20,45 +20,49 @@ describe('api', () => {
   });
 
   describe('Test Recipe Paths', () => {
+    describe('GET api/v1/recipes/calorie_search?q=calorie_count', () => {
+      beforeAll( async() => {
+        for( let i = 1; i <= 6; i++){
+          let recipe = await Recipe.create({
+            url: `www.example${i}.com`,
+            label: `Calories${i*100}`,
+            cal_per_serving: i*100
+          })
 
-    test('GET api/v1/recipes/calorie_search?q=calorie_count', async () => {
-      for( let i = 1; i <= 6; i++){
-        let recipe = await Recipe.create({
-          url: `www.example${i}.com`,
-          label: `Calories${i*100}`,
-          cal_per_serving: i*100
-        })
-
-        if( i === 1){
-          let recipe1 = recipe
+          if( i === 1){
+            var recipe1 = recipe
+          }
         }
-      }
+      });
 
-      console.log("DOING IT")
+      test('success', async () => {
 
-      return request(app)
-              .get('/api/v1/recipes/calorie_search?q=290-510')
-              .then(async function(response){
-                expect(response.statusCode).toBe(200);
-                expect(response.body).toHaveProperty("data");
-                expect(response.body.data).toHaveProperty("recipes");
 
-                let returnedRecipes = response.body.data.recipes;
-                expect(returnedRecipes).toHaveLength(3)
-                for( let returnedRecipe of returnedRecipes){
-                  expect(returnedRecipe).toHaveProperty('id');
-                  expect(returnedRecipe).toHaveProperty('label');
-                  expect(returnedRecipe).toHaveProperty('url');
-                  expect(returnedRecipe).toHaveProperty('cal_per_serving');
+        return request(app)
+                .get('/api/v1/recipes/calorie_search?q=290-510')
+                .then(async function(response){
+                  expect(response.statusCode).toBe(200);
+                  expect(response.body).toHaveProperty("data");
+                  expect(response.body.data).toHaveProperty("recipes");
 
-                  if( returnedRecipe.label === "Calories100" ){
-                    expect(returnedRecipe).toHaveProperty('url', 'www.example1.com');
-                    expect(returnedRecipe).toHaveProperty('cal_per_serving', 100);
-                    expect(returnedRecipe).toHaveProperty('id', recipe1.id);
+                  let returnedRecipes = response.body.data.recipes;
+                  expect(returnedRecipes).toHaveLength(3)
+                  for( let returnedRecipe of returnedRecipes){
+                    expect(returnedRecipe).toHaveProperty('id');
+                    expect(returnedRecipe).toHaveProperty('label');
+                    expect(returnedRecipe).toHaveProperty('url');
+                    expect(returnedRecipe).toHaveProperty('cal_per_serving');
+
+                    if( returnedRecipe.label === "Calories100" ){
+                      expect(returnedRecipe).toHaveProperty('url', 'www.example1.com');
+                      expect(returnedRecipe).toHaveProperty('cal_per_serving', 100);
+                      expect(returnedRecipe).toHaveProperty('id', recipe1.id);
+                    }
                   }
-                }
-              })
+                })
 
+
+      });
 
     });
 
