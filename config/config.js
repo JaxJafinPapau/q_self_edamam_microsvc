@@ -1,7 +1,7 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
-{
+var config = {
   "development": {
     "username": process.env.DB_USERNAME,
     "password": null,
@@ -22,8 +22,9 @@ dotenv.config();
     "username": process.env.DB_USERNAME,
     "password": null,
     "database": "q_self_edamam_microservice_production",
-    "host": "127.0.0.1",
     "dialect": "postgres",
     "operatorsAliases": false
   }
 }
+
+module.exports = config;
