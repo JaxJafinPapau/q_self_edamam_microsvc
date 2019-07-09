@@ -24,4 +24,24 @@ router.get('/calorie_search', async function(req, res, next){
   }
 })
 
+router.get('/food_search', async function(req, res, next){
+  res.setHeader(...defaultHeader);
+  try {
+    let foodType = req.query.q;
+    let recipes = await Recipe.findAll({
+      where:{
+        baseFood: foodType
+      }
+    });
+    if (foodType[0] == undefined) { throw "Invalid Query String" };
+    if (recipes[0] == undefined) {
+      // make api call, serialize, and return json
+    } else {
+      // For each recipe in recipes serialize and return json
+    };
+  } catch (error) {
+    res.status(404).send({error: error})
+  }
+})
+
 module.exports = router;
