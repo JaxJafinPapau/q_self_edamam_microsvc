@@ -7,17 +7,21 @@ const Op = Sequelize.Op;
 
 router.get('/calorie_search', async function(req, res, next){
   res.setHeader(...defaultHeader);
-  let[min, max] = req.query.q.split("-");
-
-  let recipes = await Recipe.findAll({
-    where:{
-      cal_per_serving:{
-        [Op.between]: [parseInt(min), parseInt(max)]
+  try {
+    let[min, max] = req.query.q.split("-");
+    if( max == undefined){ throw "Invalid Query String"; }
+    let recipes = await Recipe.findAll({
+      where:{
+        cal_per_serving:{
+          [Op.between]: [parseInt(min), parseInt(max)]
+        }
       }
-    }
-  })
+    })
 
-  res.status(200).send({data: {recipes: recipes}});
+    res.status(200).send({data: {recipes: recipes}});
+  } catch (error) {
+    res.status(404).send({error: error})
+  }
 })
 
 module.exports = router;

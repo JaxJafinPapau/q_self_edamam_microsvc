@@ -37,7 +37,7 @@ describe('api', () => {
 
       test('failure; inappropriate query string', async () => {
         return request(app)
-                .get('/api/v1/recipes/calorie_search?q=290-510')
+                .get('/api/v1/recipes/calorie_search?q=290510')
                 .then(async function(response){
                   expect(response.statusCode).toBe(404);
                   expect(response.body).toHaveProperty("error", "Invalid Query String");
