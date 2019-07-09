@@ -23,7 +23,7 @@ describe('api', () => {
 
     test('GET api/v1/recipes/calorie_search?q=calorie_count', async () => {
       for( let i = 1; i <= 6; i++){
-        let recipe = Recipe.create({
+        let recipe = await Recipe.create({
           url: `www.example${i}.com`,
           label: `Calories${i*100}`,
           cal_per_serving: i*100
@@ -34,6 +34,8 @@ describe('api', () => {
         }
       }
 
+      console.log("DOING IT")
+
       return request(app)
               .get('/api/v1/recipes/calorie_search?q=290-510')
               .then(async function(response){
@@ -41,7 +43,7 @@ describe('api', () => {
                 expect(response.body).toHaveProperty("data");
                 expect(response.body.data).toHaveProperty("recipes");
 
-                let returnedRecipes = response.body.data;
+                let returnedRecipes = response.body.data.recipes;
                 expect(returnedRecipes).toHaveLength(3)
                 for( let returnedRecipe of returnedRecipes){
                   expect(returnedRecipe).toHaveProperty('id');
