@@ -1,6 +1,9 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 {
   "development": {
-    "username": "root",
+    "username": process.env.DB_USERNAME,
     "password": null,
     "database": "q_self_edamam_microservice_development",
     "host": "127.0.0.1",
@@ -8,7 +11,7 @@
     "operatorsAliases": false
   },
   "test": {
-    "username": "root",
+    "username": process.env.DB_USERNAME,
     "password": null,
     "database": "q_self_edamam_microservice_test",
     "host": "127.0.0.1",
@@ -16,7 +19,7 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
+    "username": process.env.DB_USERNAME,
     "password": null,
     "database": "q_self_edamam_microservice_production",
     "host": "127.0.0.1",
