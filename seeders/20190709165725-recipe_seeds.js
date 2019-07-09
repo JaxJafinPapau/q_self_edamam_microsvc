@@ -1,8 +1,14 @@
 'use strict';
-var seed_data = require('./seedData.json')
+var seedData = require('./seedData.json')
+var seedDataWithTimes = seedData.map( seed => {
+  seed.createdAt = new Date();
+  seed.updatedAt = new Date();
+
+  return seed
+})
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert("Recipes", seed_data, {})
+    return queryInterface.bulkInsert("Recipes", seedDataWithTimes, {})
   },
 
   down: (queryInterface, Sequelize) => {
