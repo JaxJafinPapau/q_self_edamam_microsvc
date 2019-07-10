@@ -24,4 +24,21 @@ router.get('/calorie_search', async function(req, res, next){
   }
 })
 
+router.get('/food_search', async function(req, res, next){
+  res.setHeader(...defaultHeader);
+  var formattedFood = req.query.q.charAt(0).toUpperCase() + req.query.q.slice(1)
+
+  try {
+    let recipes = await Recipe.findAll({
+      where: {
+        baseFood: formattedFood
+      }
+    })
+    if (recipes[0] == undefined) { throw "Food not found."; }
+    res.status(200).send({data: {recipes: recipes}})
+  } catch (error) {
+    res.status(404).send({error: error})
+  }
+})
+
 module.exports = router;
