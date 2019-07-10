@@ -135,6 +135,14 @@ describe('api', () => {
           expect(response.body.data).toHaveProperty("avg_calories", 400)
         })
       })
+      test('FAILURE invalid food', async () => {
+        return request(app)
+        .get('/api/v1/recipes/avg_calories?q=NonExistentFood')
+        .then(async function(response) {
+          expect(response.statusCode).toBe(404)
+          expect(response.body).toHaveProperty("error", "Food not found.")
+        })
+      })
     })
   });
 });
