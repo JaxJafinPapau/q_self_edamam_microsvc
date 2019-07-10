@@ -123,5 +123,18 @@ describe('api', () => {
     test('GET api/v1/recipes/ingredient_search?q=num_of_ingredients', async () => {
 
     });
+
+    describe('GET /api/v1/recipes/avg_calories?q=food_type', () => {
+      test('SUCCESS', async () => {
+        return request(app)
+        .get('/api/v1/recipes/food_search?q=Food1')
+        .then(async function(response) {
+          expect(response.statusCode).toBe(200)
+          expect(response.body).toHaveProperty("data")
+          expect(response.body.data).toHaveProperty("food", "Food1")
+          expect(response.body.data).toHaveProperty("avg_calories", 400)
+        })
+      })
+    })
   });
 });
