@@ -127,7 +127,7 @@ describe('api', () => {
     describe('GET /api/v1/recipes/avg_calories?q=food_type', () => {
       test('SUCCESS', async () => {
         return request(app)
-        .get('/api/v1/recipes/food_search?q=Food1')
+        .get('/api/v1/recipes/avg_calories?q=Food1')
         .then(async function(response) {
           expect(response.statusCode).toBe(200)
           expect(response.body).toHaveProperty("data")
