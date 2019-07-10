@@ -157,14 +157,14 @@ describe('api', () => {
           }
         })
       })
-      // test('FAILURE invalid food', async () => {
-      //   return request(app)
-      //   .get('/api/v1/recipes/order_by_calories?q=NonExistentFood')
-      //   .then(async function(response) {
-      //     expect(response.statusCode).toBe(404)
-      //     expect(response.body).toHaveProperty("error", "Food not found.")
-      //   })
-      // })
+      test('FAILURE invalid food', async () => {
+        return request(app)
+        .get('/api/v1/recipes/order_by_calories?q=NonExistentFood')
+        .then(async function(response) {
+          expect(response.statusCode).toBe(404)
+          expect(response.body).toHaveProperty("error", "Food not found.")
+        })
+      })
     })
   });
 });
