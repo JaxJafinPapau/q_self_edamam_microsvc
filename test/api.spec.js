@@ -29,10 +29,7 @@ describe('api', () => {
     await shell.exec('npx sequelize db:drop', {silent: true});
     await sequelize.close();
   });
-
-  // beforeAll( async() => {
-  //
-  // });
+  
   describe('Test Recipe Paths', () => {
     describe('GET api/v1/recipes/calorie_search?q=calorie_count', () => {
 

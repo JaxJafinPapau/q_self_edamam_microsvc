@@ -52,4 +52,3 @@ var generateSeedData = async function(recipesPerFood = 10, filePath = './seeders
 }
 
 generateSeedData();
-// module.exports = generateSeedData;

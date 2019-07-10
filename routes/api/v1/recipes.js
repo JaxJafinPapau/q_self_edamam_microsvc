@@ -90,7 +90,6 @@ router.get('/ingredient_search', async function(req, res, next){
         num_of_ingredients: req.query.q
       }
     });
-    // console.log(recipes)
     res.status(200).send({data:{recipes:recipes}});
   } catch (error) {
     res.status(404).send({error: error})
