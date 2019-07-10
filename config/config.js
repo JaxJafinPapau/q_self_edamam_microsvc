@@ -19,11 +19,10 @@ var config = {
     "operatorsAliases": false
   },
   "production": {
-    "username": process.env.DB_USERNAME,
-    "password": null,
     "database": "q_self_edamam_microservice_production",
     "dialect": "postgres",
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "use_env_variable": "DATABASE_URL"
   }
 }
 
