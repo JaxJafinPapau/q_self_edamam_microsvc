@@ -46,13 +46,19 @@ router.get('/food_search', async function(req, res, next){
 router.get('/avg_calories', async function(req, res, next){
   res.setHeader(...defaultHeader)
   var formattedFood = req.query.q.charAt(0).toUpperCase() + req.query.q.slice(1)
-  let avg_calories = await Recipe.findAll({
-    where: {
-      baseFood: formattedFood
-    },
-    attributes: [[sequelize.fn("AVG", sequelize.col("cal_per_serving")), "avg_calories"]]
-  })
-  res.status(200).send({data: {food: formattedFood, avg_calories: parseInt(avg_calories[0].dataValues.avg_calories)}})
+  try {
+    let avg_calories = await Recipe.findAll({
+      where: {
+        baseFood: formattedFood
+      },
+      attributes: [[sequelize.fn("AVG", sequelize.col("cal_per_serving")), "avg_calories"]]
+    })
+    let formattedAvg = avg_calories[0].dataValues.avg_calories
+    if (formattedAvg == null) { throw "Food not found."; }
+    res.status(200).send({data: {food: formattedFood, avg_calories: parseInt(formattedAvg)}})
+  } catch (error) {
+    res.status(404).send({error: error})
+  }
 })
 
 module.exports = router;
