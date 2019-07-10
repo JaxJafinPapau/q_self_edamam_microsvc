@@ -17,7 +17,7 @@ describe('api', () => {
         label: `Calories${i*100}`,
         cal_per_serving: i*100,
         num_of_ingredients: i,
-        baseFood: 'Food1'
+        baseFood: `Food${(i % 2) + 1}`
       })
 
       if( i === 1){
@@ -92,12 +92,13 @@ describe('api', () => {
           expect(response.body.data).toHaveProperty("recipes");
 
           let returnedRecipes = response.body.data.recipes;
-          expect(returnedRecipes).toHaveLength(6)
+          expect(returnedRecipes).toHaveLength(3)
           for( let returnedRecipe of returnedRecipes){
             expect(returnedRecipe).toHaveProperty('id');
             expect(returnedRecipe).toHaveProperty('label');
             expect(returnedRecipe).toHaveProperty('url');
             expect(returnedRecipe).toHaveProperty('cal_per_serving');
+            expect(returnedRecipe).toHaveProperty('baseFood', 'Food1')
 
             if( returnedRecipe.label === "Calories100" ){
               expect(returnedRecipe).toHaveProperty('url', 'www.example1.com');
