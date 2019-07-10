@@ -114,8 +114,54 @@ describe('api', () => {
 
     })
 
-    test('GET api/v1/recipes/ingredient_search?q=num_of_ingredients', async () => {
+    describe('GET api/v1/recipes/ingredient_search?q=num_of_ingredients', () => {
+      test('success', async () => {
 
+        return request(app)
+                .get('/api/v1/recipes/ingredient_search?q=4')
+                .then(async function(response){
+                  expect(response.statusCode).toBe(200);
+                  expect(response.body).toHaveProperty("data");
+                  expect(response.body.data).toHaveProperty("recipes");
+
+                  let returnedRecipes = response.body.data.recipes;
+                  expect(returnedRecipes).toHaveLength(1)
+                  for( let returnedRecipe of returnedRecipes){
+                    expect(returnedRecipe).toHaveProperty('id');
+                    expect(returnedRecipe).toHaveProperty('label');
+                    expect(returnedRecipe).toHaveProperty('url');
+                    expect(returnedRecipe).toHaveProperty('cal_per_serving');
+
+                    if( returnedRecipe.label === "Calories400" ){
+                      expect(returnedRecipe).toHaveProperty('url', 'www.example4.com');
+                      expect(returnedRecipe).toHaveProperty('cal_per_serving', 400);
+                      expect(returnedRecipe).toHaveProperty('id', testRecipes[3].id);
+                    }
+                  }
+                })
+      })
+
+      test('failure; no parameter specified', async () => {
+
+        return request(app)
+                .get('/api/v1/recipes/ingredient_search')
+                .then(async function(response){
+                  expect(response.statusCode).toBe(404);
+                  expect(response.body).toHaveProperty("error", "Invalid Parameters");
+
+                })
+      })
+
+      test('failure; negative parameter', async () => {
+
+        return request(app)
+                .get('/api/v1/recipes/ingredient_search?q=-1')
+                .then(async function(response){
+                  expect(response.statusCode).toBe(404);
+                  expect(response.body).toHaveProperty("error", "Invalid Parameters");
+
+                })
+      })
     });
 
     describe('GET /api/v1/recipes/avg_calories?q=food_type', () => {

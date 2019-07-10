@@ -76,6 +76,25 @@ router.get('/order_by_calories', async function(req, res, next){
   } catch (error) {
     res.status(404).send({error: error})
   }
+});
+
+router.get('/ingredient_search', async function(req, res, next){
+  res.setHeader(...defaultHeader);
+  try{
+    if (req.query.q == undefined || req.query.q <= 0){
+      throw "Invalid Parameters";
+    }
+    let recipes = await Recipe.findAll({
+      where:
+      {
+        num_of_ingredients: req.query.q
+      }
+    });
+    // console.log(recipes)
+    res.status(200).send({data:{recipes:recipes}});
+  } catch (error) {
+    res.status(404).send({error: error})
+  }
 })
 
 module.exports = router;
