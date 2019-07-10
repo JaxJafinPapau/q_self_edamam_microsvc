@@ -2,7 +2,7 @@ var shell = require('shelljs');
 var request = require("supertest");
 var app = require('../app');
 var {sequelize} = require('../models');
-var recipe1, recipe4
+var testRecipes = []
 
 var Recipe = require('../models').Recipe;
 
@@ -19,13 +19,7 @@ describe('api', () => {
         num_of_ingredients: i,
         baseFood: `Food${(i % 2) + 1}`
       })
-
-      if( i === 1){
-        recipe1 = recipe
-      }
-      if( i === 4){
-        recipe4 = recipe
-      }
+      testRecipes.push(recipe)
     }
   });
 
@@ -72,7 +66,7 @@ describe('api', () => {
                     if( returnedRecipe.label === "Calories100" ){
                       expect(returnedRecipe).toHaveProperty('url', 'www.example1.com');
                       expect(returnedRecipe).toHaveProperty('cal_per_serving', 100);
-                      expect(returnedRecipe).toHaveProperty('id', recipe1.id);
+                      expect(returnedRecipe).toHaveProperty('id', testRecipes[0].id);
                     }
                   }
                 })
@@ -103,7 +97,7 @@ describe('api', () => {
             if( returnedRecipe.label === "Calories100" ){
               expect(returnedRecipe).toHaveProperty('url', 'www.example1.com');
               expect(returnedRecipe).toHaveProperty('cal_per_serving', 100);
-              expect(returnedRecipe).toHaveProperty('id', recipe1.id);
+              expect(returnedRecipe).toHaveProperty('id', testRecipes[0].id);
             }
           }
         })
@@ -143,6 +137,34 @@ describe('api', () => {
           expect(response.body).toHaveProperty("error", "Food not found.")
         })
       })
+    })
+    describe('GET /api/v1/recipes/order_by_calories?q=food_type', () => {
+      test('SUCCESS', async () => {
+        return request(app)
+        .get('/api/v1/recipes/order_by_calories?q=Food1')
+        .then(async function(response) {
+          expect(response.statusCode).toBe(200)
+          expect(response.body).toHaveProperty("data")
+          expect(response.body.data).toHaveProperty("food", "Food1")
+          expect(response.body.data).toHaveProperty("recipes")
+          expect(response.body.data.recipes).toHaveLength(3)
+          for(let i = 0; i < 3; i++) {
+            expect(response.body.data.recipes[i]).toHaveProperty("id", testRecipes[(i*2)+1].id)
+            expect(response.body.data.recipes[i]).toHaveProperty("url", testRecipes[(i*2)+1].url)
+            expect(response.body.data.recipes[i]).toHaveProperty("label", testRecipes[(i*2)+1].label)
+            expect(response.body.data.recipes[i]).toHaveProperty("cal_per_serving", testRecipes[(i*2)+1].cal_per_serving)
+            expect(response.body.data.recipes[i]).toHaveProperty("num_of_ingredients", testRecipes[(i*2)+1].num_of_ingredients)
+          }
+        })
+      })
+      // test('FAILURE invalid food', async () => {
+      //   return request(app)
+      //   .get('/api/v1/recipes/order_by_calories?q=NonExistentFood')
+      //   .then(async function(response) {
+      //     expect(response.statusCode).toBe(404)
+      //     expect(response.body).toHaveProperty("error", "Food not found.")
+      //   })
+      // })
     })
   });
 });
