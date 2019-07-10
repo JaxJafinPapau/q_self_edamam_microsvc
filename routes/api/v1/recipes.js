@@ -61,4 +61,16 @@ router.get('/avg_calories', async function(req, res, next){
   }
 })
 
+router.get('/order_by_calories', async function(req, res, next){
+  res.setHeader(...defaultHeader)
+  var formattedFood = req.query.q.charAt(0).toUpperCase() + req.query.q.slice(1)
+  let recipes = await Recipe.findAll({
+    where: {
+      baseFood: formattedFood
+    },
+    order: [["cal_per_serving", "ASC"]]
+  })
+  res.status(200).send({data: {food: formattedFood, recipes: recipes}})
+})
+
 module.exports = router;
