@@ -1,0 +1,352 @@
+[
+  {
+    "url": "http://www.seriouseats.com/recipes/2011/12/chicken-vesuvio-recipe.html",
+    "label": "Chicken Vesuvio",
+    "baseFood": "Chicken",
+    "num_of_ingredients": 10,
+    "cal_per_serving": 1057.5764228002702
+  },
+  {
+    "url": "http://norecipes.com/recipe/chicken-paprikash/",
+    "label": "Chicken Paprikash",
+    "baseFood": "Chicken",
+    "num_of_ingredients": 11,
+    "cal_per_serving": 758.3003125002041
+  },
+  {
+    "url": "http://www.marthastewart.com/332664/chicken-gravy",
+    "label": "Chicken Gravy",
+    "baseFood": "Chicken",
+    "num_of_ingredients": 6,
+    "cal_per_serving": 182.06010583331184
+  },
+  {
+    "url": "http://www.bonappetit.com/columns/breadwinner/article/how-to-get-your-kids-to-eat-sauce-let-them-cook-it-themselves",
+    "label": "Catalan Chicken",
+    "baseFood": "Chicken",
+    "num_of_ingredients": 6,
+    "cal_per_serving": 274.90000000000003
+  },
+  {
+    "url": "https://food52.com/recipes/3403-citrus-roasted-chicken",
+    "label": "Citrus Roasted Chicken",
+    "baseFood": "Chicken",
+    "num_of_ingredients": 6,
+    "cal_per_serving": 660.7975421312501
+  },
+  {
+    "url": "http://www.bbcgoodfood.com/recipes/7343/persian-chicken",
+    "label": "Persian Chicken",
+    "baseFood": "Chicken",
+    "num_of_ingredients": 10,
+    "cal_per_serving": 821.4987448058461
+  },
+  {
+    "url": "https://www.tastingtable.com/entry_detail/chefs_recipes/10154/Matzo_balls_watch_your_back.htm",
+    "label": "Kreplach (Chicken Dumplings)",
+    "baseFood": "Chicken",
+    "num_of_ingredients": 11,
+    "cal_per_serving": 534.859624321875
+  },
+  {
+    "url": "http://www.cookstr.com/recipes/twistinrsquo-chicken",
+    "label": "Twistin’ Chicken",
+    "baseFood": "Chicken",
+    "num_of_ingredients": 4,
+    "cal_per_serving": 59.03983333333334
+  },
+  {
+    "url": "http://www.simplyrecipes.com/recipes/chicken_piccata/",
+    "label": "Chicken Piccata",
+    "baseFood": "Chicken",
+    "num_of_ingredients": 11,
+    "cal_per_serving": 412.7654031251159
+  },
+  {
+    "url": "http://www.sfgate.com/food/recipes/detail.html?rid=18229&sorig=qs",
+    "label": "Roast Chicken",
+    "baseFood": "Chicken",
+    "num_of_ingredients": 5,
+    "cal_per_serving": 258.44782139080803
+  },
+  {
+    "url": "http://www.saveur.com/article/Recipes/Roast-Beef",
+    "label": "Roast Beef",
+    "baseFood": "Beef",
+    "num_of_ingredients": 2,
+    "cal_per_serving": 901.5284431461001
+  },
+  {
+    "url": "http://www.bbcgoodfood.com/recipes/2558/",
+    "label": "Roast Sirloin Of Beef",
+    "baseFood": "Beef",
+    "num_of_ingredients": 4,
+    "cal_per_serving": 352.1033333333333
+  },
+  {
+    "url": "http://www.epicurious.com/recipes/food/views/Beef-Tea-395253",
+    "label": "Beef Tea",
+    "baseFood": "Beef",
+    "num_of_ingredients": 3,
+    "cal_per_serving": 257.413669975
+  },
+  {
+    "url": "http://www.seriouseats.com/recipes/2014/05/homemade-italian-beef-sandwich.html",
+    "label": "Homemade Italian Beef Recipe",
+    "baseFood": "Beef",
+    "num_of_ingredients": 12,
+    "cal_per_serving": 844.1091637194445
+  },
+  {
+    "url": "http://simplyrecipes.com/recipes/beef_brisket/",
+    "label": "Beef Brisket",
+    "baseFood": "Beef",
+    "num_of_ingredients": 4,
+    "cal_per_serving": 308.32159793750003
+  },
+  {
+    "url": "http://www.marthastewart.com/341384/beef-stroganoff",
+    "label": "Beef Stroganoff",
+    "baseFood": "Beef",
+    "num_of_ingredients": 9,
+    "cal_per_serving": 472.35482817305007
+  },
+  {
+    "url": "http://norecipes.com/beef-cheek-confit-with-caramelized-turnips-recipe",
+    "label": "Beef Cheek Confit With Caramelized Turnips",
+    "baseFood": "Beef",
+    "num_of_ingredients": 12,
+    "cal_per_serving": 206.99983333333333
+  },
+  {
+    "url": "http://www.thekitchn.com/recipe-beef-stroganoff-78889",
+    "label": "Beef Stroganoff",
+    "baseFood": "Beef",
+    "num_of_ingredients": 10,
+    "cal_per_serving": 294.35252724175535
+  },
+  {
+    "url": "https://food52.com/recipes/14484-portabello-beef-stew",
+    "label": "Portabello Beef Stew",
+    "baseFood": "Beef",
+    "num_of_ingredients": 8,
+    "cal_per_serving": 313.08134395801284
+  },
+  {
+    "url": "http://www.cookstr.com/recipes/basic-beef",
+    "label": "Basic Beef",
+    "baseFood": "Beef",
+    "num_of_ingredients": 4,
+    "cal_per_serving": 245.09192396000003
+  },
+  {
+    "url": "http://nymag.com/restaurants/articles/recipes/broccolirabe.htm",
+    "label": "Broccoli Rabe",
+    "baseFood": "Broccoli",
+    "num_of_ingredients": 4,
+    "cal_per_serving": 133.47700097305002
+  },
+  {
+    "url": "https://www.marthastewart.com/1155293/broccoli-parmesan",
+    "label": "Broccoli with Parmesan",
+    "baseFood": "Broccoli",
+    "num_of_ingredients": 4,
+    "cal_per_serving": 165.5506828797875
+  },
+  {
+    "url": "https://food52.com/recipes/6823-grilled-broccoli",
+    "label": "Grilled Broccoli",
+    "baseFood": "Broccoli",
+    "num_of_ingredients": 3,
+    "cal_per_serving": 163.03
+  },
+  {
+    "url": "http://www.epicurious.com/recipes/food/views/Broccoli-Almondine-240949",
+    "label": "Broccoli Almondine",
+    "baseFood": "Broccoli",
+    "num_of_ingredients": 4,
+    "cal_per_serving": 204.269277175
+  },
+  {
+    "url": "http://www.bbcgoodfood.com/recipes/2565/",
+    "label": "Parmesan Broccoli",
+    "baseFood": "Broccoli",
+    "num_of_ingredients": 3,
+    "cal_per_serving": 113.54166666666667
+  },
+  {
+    "url": "http://www.bonappetit.com/recipes/2003/06/broccoli_and_broccoli_rabe_with_roasted_red_peppers",
+    "label": "Broccoli And Broccoli Rabe With Roasted Red Peppers",
+    "baseFood": "Broccoli",
+    "num_of_ingredients": 5,
+    "cal_per_serving": 152.02588526666668
+  },
+  {
+    "url": "http://www.saveur.com/article/Recipes/Sauted-Chinese-Broccoli",
+    "label": "Sautéed Chinese Broccoli",
+    "baseFood": "Broccoli",
+    "num_of_ingredients": 9,
+    "cal_per_serving": 132.26608034996744
+  },
+  {
+    "url": "http://www.kitchendaily.com/recipe/broccoli-and-noodle-supreme",
+    "label": "Broccoli and Noodle Supreme",
+    "baseFood": "Broccoli",
+    "num_of_ingredients": 6,
+    "cal_per_serving": 184.26099166666668
+  },
+  {
+    "url": "http://www.thekitchn.com/recipe-broccoli-casserole-102381",
+    "label": "Broccoli Casserole",
+    "baseFood": "Broccoli",
+    "num_of_ingredients": 12,
+    "cal_per_serving": 278.32223913614035
+  },
+  {
+    "url": "http://www.foodandwine.com/recipes/jade-broccoli-with-pecans",
+    "label": "Jade Broccoli With Pecans",
+    "baseFood": "Broccoli",
+    "num_of_ingredients": 5,
+    "cal_per_serving": 186.4280833333333
+  },
+  {
+    "url": "http://leitesculinaria.com/81435/recipes-cereal-milk.html",
+    "label": "Cereal Milk",
+    "baseFood": "Milk",
+    "num_of_ingredients": 4,
+    "cal_per_serving": 234.3849999995583
+  },
+  {
+    "url": "http://www.seriouseats.com/recipes/2010/08/milk-liqueur-recipe.html",
+    "label": "Milk Liqueur",
+    "baseFood": "Milk",
+    "num_of_ingredients": 5,
+    "cal_per_serving": 426.32567775000007
+  },
+  {
+    "url": "https://smittenkitchen.com/2016/06/strawberry-milk/",
+    "label": "strawberry milk",
+    "baseFood": "Milk",
+    "num_of_ingredients": 4,
+    "cal_per_serving": 179.4449264
+  },
+  {
+    "url": "http://www.marthastewart.com/355547/milk-glaze",
+    "label": "Milk Glaze",
+    "baseFood": "Milk",
+    "num_of_ingredients": 2,
+    "cal_per_serving": 203.65
+  },
+  {
+    "url": "http://www.simplyrecipes.com/recipes/strawberry_milk/",
+    "label": "Strawberry Milk",
+    "baseFood": "Milk",
+    "num_of_ingredients": 3,
+    "cal_per_serving": 188.82
+  },
+  {
+    "url": "http://www.bonappetit.com/recipe/peanut-milk",
+    "label": "Peanut Milk",
+    "baseFood": "Milk",
+    "num_of_ingredients": 5,
+    "cal_per_serving": 215.94458333333333
+  },
+  {
+    "url": "http://lacucinaitalianamagazine.com/recipe/fennel_pear_and_radicchio_salad/?gtnjs=1",
+    "label": "Warm vanilla milk",
+    "baseFood": "Milk",
+    "num_of_ingredients": 4,
+    "cal_per_serving": 89.2835
+  },
+  {
+    "url": "https://food52.com/recipes/30121-homemade-milk-kefir",
+    "label": "Homemade Milk Kefir",
+    "baseFood": "Milk",
+    "num_of_ingredients": 2,
+    "cal_per_serving": 168.10497309194724
+  },
+  {
+    "url": "http://www.saveur.com/article/Recipes/Milk-Gelato",
+    "label": "Milk Gelato",
+    "baseFood": "Milk",
+    "num_of_ingredients": 5,
+    "cal_per_serving": 179.94683333333333
+  },
+  {
+    "url": "http://www.bbcgoodfood.com/recipes/2256637/strawberry-milk-pops",
+    "label": "Strawberry milk pops",
+    "baseFood": "Milk",
+    "num_of_ingredients": 3,
+    "cal_per_serving": 129.48933153946314
+  },
+  {
+    "url": "http://www.seriouseats.com/recipes/2008/01/dinner-tonight-butter-butter-salad.html",
+    "label": "Dinner Tonight: Butter Butter Salad",
+    "baseFood": "Butter",
+    "num_of_ingredients": 4,
+    "cal_per_serving": 108.23190937499999
+  },
+  {
+    "url": "http://www.marthastewart.com/333190/cranberry-butter",
+    "label": "Cranberry Butter",
+    "baseFood": "Butter",
+    "num_of_ingredients": 2,
+    "cal_per_serving": 255.73250000000004
+  },
+  {
+    "url": "https://food52.com/recipes/13134-raspberry-butter",
+    "label": "Raspberry Butter",
+    "baseFood": "Butter",
+    "num_of_ingredients": 3,
+    "cal_per_serving": 153.8073872041667
+  },
+  {
+    "url": "http://www.epicurious.com/recipes/food/views/Shrimp-Butter-365796",
+    "label": "Shrimp Butter",
+    "baseFood": "Butter",
+    "num_of_ingredients": 7,
+    "cal_per_serving": 211.24878592461005
+  },
+  {
+    "url": "http://www.bonappetit.com/recipe/shrimp-butter",
+    "label": "Shrimp Butter",
+    "baseFood": "Butter",
+    "num_of_ingredients": 7,
+    "cal_per_serving": 211.24878592461005
+  },
+  {
+    "url": "http://www.saveur.com/article/Recipes/Brandy-Butter",
+    "label": "Brandy Butter",
+    "baseFood": "Butter",
+    "num_of_ingredients": 3,
+    "cal_per_serving": 239.14349999999996
+  },
+  {
+    "url": "http://www.jamieoliver.com/recipes/fruit-recipes/christmas-butter/",
+    "label": "Christmas butter",
+    "baseFood": "Butter",
+    "num_of_ingredients": 6,
+    "cal_per_serving": 208.76350699999998
+  },
+  {
+    "url": "http://www.finecooking.com/recipes/maple-butter.aspx?ac=fp",
+    "label": "Maple Butter",
+    "baseFood": "Butter",
+    "num_of_ingredients": 3,
+    "cal_per_serving": 285.462864645
+  },
+  {
+    "url": "http://www.bbc.co.uk/food/recipes/brandybutter_2535",
+    "label": "Brandy butter",
+    "baseFood": "Butter",
+    "num_of_ingredients": 4,
+    "cal_per_serving": 244.27666666666667
+  },
+  {
+    "url": "http://www.thekitchn.com/classic-biscuit-recipe-butter-134525",
+    "label": "Butter Dips",
+    "baseFood": "Butter",
+    "num_of_ingredients": 6,
+    "cal_per_serving": 185.34569444444446
+  }
+]
